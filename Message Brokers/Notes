@@ -1,0 +1,22 @@
+What is Message Broker?
+  1.Very important component of modern web technology.
+  2.Middleware program that provides asynchronous communication b/w different components using publisher-subscriber paradigm.
+  3.That means both sender and receiver are loosely coupled and don't need to be online all time to communicate.
+
+Why need message broker?
+    Basically, message brokers used for.
+    To ensure loosely coupling between producer and consumer.
+    To maintain asynchronous/ non-blocking communication between producer and consumer.
+    In case consumer cannot process messages as fast as producer sending. (Messages can be buffered in queue)
+
+    Server publishes their messages to some specific topic inside broker and if client subscribes that particular topic client receives messages that published by the server.
+    The reverse is also possible. Messages bodies can be a different format (JSON, XML, text, binary etc.).
+
+Types of Message Brokers:
+  Apache Kafka
+  RabbitMQ
+  Apache ActiveMQ
+  Kestrel
+  WSO2 Message Broker
+
+  

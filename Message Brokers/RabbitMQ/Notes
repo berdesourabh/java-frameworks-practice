@@ -1,0 +1,57 @@
+AMQP(Advance Message Queue Protocol)
+
+AMQP (Advanced Message Queuing Protocol) is a protocol that RabbitMQ uses for messaging.
+Although RabbitMQ supports some other protocols, AMQP is most preferable due to compatibility and the large set of features it offers.
+
+RabbitMQ Installation
+Visit RabbitMQ official website where you will find download+install link. Click on this link to go to download and install section. You will get some options for download and install for different OS types. Choose the one suitable for the OS you are using and proceed with downloading and installing.
+
+Note that RabbitMQ also requires Erlang to be installed to make it work. You can find the compatible and recommended version of Erlang for the RabbitMQ version you have installed or selected on this link. Start Installing RabbitMQ and respective erlang one-by-one and choose default options if it prompts you to select.
+
+To verify if RabbitMQ is running or not, you can go to windows services and find the RabbitMQ in the list of services.
+
+
+RabbitMQ Key terms
+# Exchange: Takes message and routes them to one or more queues. Routing algo decides where to route the message from Exchange.
+ Routing algorithms depends on the exchange type and rules called “bindings.”
+
+Routing type:
+
+1.Direct: It routes messages with a routing key equal to the routing key declared by the binding queue
+This is a Default exchange type.
+It is used when a message needs to send to a queue
+
+2.Fanout: It routes messages to all the queues from the bound exchange. If routing key is provided then it will be ignored
+Useful for broadcast feature using publish subscribe pattern
+
+3.Topic: It routes messages to queues based on either full or a portion of routing key matches
+Useful for broadcast to specific queues based on some criteria
+
+4.Headers: Routes messages based upon matching of the message header to specified header based on binding queue
+Useful for directing messages which may contain a subset of known criteria
+
+
+# Topics: Topics are the subject part of the messages. These are the optional parameters for message exchange.
+
+# Bindings: "Bindings" is the glue that holds exchanges and queues together. These are the rules for routing algorithms.
+
+# Queue: Queue is a container for messages. It is only bound by the host’s memory and disk limit.
+    Queues are the final destination for messages before being popped up by subscribers.
+
+Properties of Queue:
+  1.Name: Name of the queue
+
+  2.Durable: Either persists the queue to the disk or not
+
+  3.Exclusive: Delete the queue if not used anymore
+
+  4.Auto-Delete: Delete the queue if consumer unsubscribes
+
+# Producer: Producer is a program that sends message to a queue.
+
+# Consumer: A consumer is a program which receives messages from the queue.
+
+RabbitMQ Configuration:
+RabbitMQ configurations can be fed using rabbitmq.conf file.
+The default file location depends on the OS. The default location of the config file on windows is %APPDATA%\RabbitMQ\
+To override the main RabbitMQ config file location, you can use the RABBITMQ_CONFIG_FILE environment variable.

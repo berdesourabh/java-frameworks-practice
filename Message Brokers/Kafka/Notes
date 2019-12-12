@@ -1,0 +1,6 @@
+What is Kafka?
+Apache Kafka is a fast, scalable, fault-tolerant messaging system which enables communication between producers and consumers using message-based topics.
+In simple words, it designs a platform for high-end new generation distributed applications.
+
+Also, it allows a large number of permanent or ad-hoc consumers. One of the best features of Kafka is, it is highly available and resilient to node failures and supports automatic recovery.
+ This feature makes Apache Kafka ideal for communication and integration between components of large-scale data systems in real-world data systems.
