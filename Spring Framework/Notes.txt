@@ -1,0 +1,84 @@
+An Introduction to Spring Framework:
+
+  When Spring came out, it was a simpler, a light-weight alternative to J2EE, to make J2EE development easier.
+
+1.Promotes loose coupling by making use of dependency of injection. So,
+instead of hard-coding the dependencies of an object, you simply specify the dependencies via configuration file (or annotations, or java code).
+
+2.Uses AOP (Aspect Oriented Programming).
+It allows the separation of cross-cutting concerns (i.e. logging, auditing, declarative transactions, security, caching, etc) from the business logic.
+
+3.Minimize the boilerplate Java code.
+It has a collection of helper packages and classes to make it easier and avoid boilerplate code, and you have to worry only about the classes you need and ignore the rest.
+
+4.It makes use of some of the existing technologies like several ORM frameworks, logging frameworks, JEE, Quartz and JDK timers, and other.
+
+5.The core features of the Spring framework can be used in developing any Java application, but there are extensions for building web applications on top of the Java EE platform.
+
+
+#Components of Spring Architecture
+https://medium.com/omarelgabrys-blog/spring-a-head-start-introduction-part-1-130aa1b41e47
+
+1.Core Container
+  It’s used for creating beans and manage beans dependencies.
+  The Core and Bean modules provide the fundamental parts of the framework, including the IoC and Dependency Injection features.
+  The Bean module provides BeanFactory, which is a sophisticated implementation of the factory pattern. It decouples the configuration and specification of dependencies from the actual program logic.
+  The Context module builds on the Core and Beans modules. It is a means to access any objects defined and configured.
+  💡The context module extends the BeanFactory and adds support for application lifecycle events, and validation. It enables many enterprise services such as JNDI access, EJB integration, remoting and scheduling, and also facilitates easy integration with the other frameworks.
+  The SpEL module provides a powerful expression language for querying and manipulating objects during the runtime.
+
+2.Data Access/Integration Modules
+  It’s used to communicate with the database.
+  JDBC: Provides a JDBC-abstraction layer that removes the need for JDBC related coding.
+  ORM: Provides an integration layers for popular object-relational mapping APIs, including JPA, JDO, Hibernate, and iBatis.
+  OXM: Provides an abstraction layer that supports Object/XML mapping implementations.
+  The Java Messaging Service (JMS): Contains features for producing and consuming messages (emails).
+  Transaction: It supports transaction management for classes.
+
+3.Web Modules
+  It’s the home of Sring MVC framework. We can integrate other technologies like JSF.
+  Web: Provides basic web-oriented integration features such as multipart file upload functionality and the initialization of the IoC container using Servlet listeners and a web-oriented application context.
+  Web-MVC: Contains Spring’s Model-View-Controller (MVC) and REST Web Services implementation for web applications.
+  Web-Sockets: Provides support for WebSocket-based, two-way communication between the client and the server in web applications.
+  Web-Portlet: Provides the MVC implementation to be used in a portlet environment and mirrors the functionality of Web-MVC module.
+
+4.AOP and Instrumentation
+  AOP: Provides an aspect-oriented programming implementation allowing you to separate the cross-cutting concerns from the business logic (as explained before).
+  Aspects: It’s a separate module provides integration with AspectJ.
+  Instrumentation: Provides support to class instrumentation support and classloader implementations.
+
+5.Messaging
+  It serves as a foundation for messaging-based applications.
+  It brings the features of asynchronous messaging system and provides support for STOMP to be used over WebScokets for users to exchange messages.
+
+6.Test
+  It supports the unit testing and integration testing of Spring components with JUnit or TestNG. It also provides mock objects that you can use to test your code in isolation.
+
+
+
+
+  IOC Container:
+  The Spring IoC container is at the core of the Spring Framework. The container will create the objects, wire them together, configure them, and manage their complete life cycle from creation till destruction. The Spring container uses dependency injection (DI) to manage the components that make up an application.
+
+Spring provides following two types of containers.
+
+1.BeanFactory container:
+
+A BeanFactory is essentially nothing more than the interface for an advanced factory capable of maintaining a registry of different beans and their dependencies.
+
+The BeanFactory enables us to read bean definitions and access them using the bean factory.
+
+Resource resource = new FileSystemResource("beans.xml");
+BeanFactory factory = new XmlBeanFactory(resource);
+
+ClassPathResource resource = new ClassPathResource("beans.xml");
+BeanFactory factory = new XmlBeanFactory(resource);
+
+
+2.ApplicationContext container
+ApplicationContext container adds more enterprise-specific functionality such as the ability to resolve textual messages from a properties file and the ability to publish application events to interested event listeners.
+This container is defined by the org.springframework.context.ApplicationContext interface.
+
+FileSystemXmlApplicationContext – This container loads the definitions of the beans from an XML file. Here you need to provide the full path of the XML bean configuration file to the constructor.
+ClassPathXmlApplicationContext – This container loads the definitions of the beans from an XML file. Here you do not need to provide the full path of the XML file but you need to set CLASSPATH properly because this container will look bean configuration XML file in CLASSPATH.
+WebXmlApplicationContext – This container loads the XML file with definitions of all beans from within a web application.
