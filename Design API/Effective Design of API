@@ -1,0 +1,46 @@
+Effective design of RESTful APIs:
+Roy Fielding invented REST in thesis
+
+HATEOAS: Hypermedia as The Engine Of Application Status
+
+We are building Employee directory:
+
+Base API url: /api/employees
+
+resource is noun not verb:
+That means you should not use getEmployee/deleteEmployee these sorts of names, because in future there could be many methods which will crowd our API urls.
+So always us nouns like
+1./api/employees -> To get all employees
+2./api/employees/{emp_id} -> To get single employee
+
+Why "employees"?
+
+Employees is collection of employees. That means it plural resource that's why we use employees.
+
+Linking:
+Let's say we have departments associated with employees.How the response would be?
+
+"employee": {
+  "href": "http://localhost:8000/api/employees/123"   ->link to self
+  "name": "xyz",
+  "deparment": {
+    "href": "http://localhost:8000/api/departments/abc"
+  }
+}
+In above example, we have given just a hyperlink to the department object.
+In any case if we want whole object in employee response only we can pass in query param as expand=department which will give us whole department object.
+
+
+Security:
+
+Avoid sessions when possible:
+  Authenticate every request if necessary.
+  REST is stateless.
+
+Authorize based on resource content, NOT URL.
+
+Use existing Protocol:
+  Oauth 1.0a, OAuth2.
+  Basic over SSL only.-> not secure
+
+Use API keys insted if username/password.

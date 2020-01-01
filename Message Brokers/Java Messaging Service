@@ -1,0 +1,19 @@
+https://howtodoinjava.com/jms/jms-java-message-service-tutorial/
+
+In Java, if a person wants to send a message from one application to another in such a way that both application do not know anything about each other, even they may be deployed in separate continents with no dependency at all.
+For example, one application A is running in India and another application is running in USA, and B is interested in getting some updates/messages from A – whenever something unique happen on A.
+There may be N number of such applications who are interested in such updates from A.
+
+In this scenario, java provides it’s best solution in form of JMS – and solve the exactly same problem discussed above.
+
+The JMS is also useful when we are writing any event based application like chat server where it needs a publish event mechanism to send messages between the server to the clients who are connected with the server.
+ As the JMS is different from RMI so there is no need of the destination object to be available online while sending a message from the client to the server. Server publish the message and forget it, whenever client comes online, it will fetch the message.
+ It’s very powerful solution for very common problems in today’s world.
+
+
+ 3. JMS Messaging Domains
+ Before the JMS API existed, most messaging products supported either the point-to-point or the publish/subscribe approach to messaging.
+ The JMS provides a separate domain for each approach and defines the compliance for each domain.
+ Any JMS provider can implement both or one domain, it’s his own choice. The JMS provides the common interfaces which enables us to use the JMS API in such a way that it is not specific to the either domain.
+
+ Let’s see both type of messaging domains in more detail to understand how JMS works.

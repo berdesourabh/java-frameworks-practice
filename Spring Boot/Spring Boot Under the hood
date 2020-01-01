@@ -1,0 +1,7 @@
+https://www.youtube.com/watch?v=uof5h-j0IeE
+
+@SpringBootApplication:
+  @SpringBootConfiguration
+  @ComponentScan :
+    Associates scanning with particular package.
+  @EnableAutoConfiguration

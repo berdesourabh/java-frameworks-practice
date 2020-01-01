@@ -1,0 +1,23 @@
+Q. What is the difference between static and non static methods memory allocation in java?
+A.
+Characteristics of Static methods
+A static method is called using the class (className.methodName) as opposed to to an instance reference (new instanceOfClass = class; instanceOfClass.methodName.)
+Static methods can’t use non-static instance variables: a static method can’t refer to any instance variables of the class. The static method doesn’t know which instance’s variable value to use.
+Static methods can’t call non-static methods: non-static methods usually use instance variable state to affect their behaviour. Static methods can’t see instance variable state, so if you try to call a non-static method from a static method the compiler will complain regardless if the non-static method uses an instance variable or not.
+
+Non-Static methods
+A non-static method does not have the keyword static before the name of the method.
+A non-static method belongs to an object of the class and you have to create an instance of the class to access it.
+Non-static methods can access any static method and any static variable without creating an instance of the class.
+
+
+Q. What is classloader in Java.
+A. ClassLoader in Java is a class which is used to load class files in Java.
+Java code is compiled into class file by javac compiler and JVM executes Java program, by executing byte codes written in class file.
+ClassLoader is responsible for loading class files from file system, network or any other source.
+There are three default class loader used in Java
+1.Bootstrap -> Every class loader has a predefined location, from where they loads class files. Bootstrap ClassLoader is responsible for loading standard JDK class files from rt.jar and it is parent of all class loaders in Java.
+
+2.Extension -> Extension ClassLoader delegates class loading request to its parent, Bootstrap and if unsuccessful, loads class form jre/lib/ext directory or any other directory pointed by java.ext.dirs system property.
+
+3.System or Application class loader -> Third default class loader used by JVM to load Java classes is called System or Application class loader and it is responsible for loading application specific classes from CLASSPATH environment variable, -classpath or -cp command line option,
