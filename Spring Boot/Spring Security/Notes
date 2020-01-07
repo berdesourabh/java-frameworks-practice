@@ -1,0 +1,69 @@
+What Spring Security Can do?
+  1.Username/Password Authentication
+  2.SSO/Okta/LDAP
+  3.App Level Authorization
+  4.Intra App Authorization like OAuth
+  5.Microservices security(using tokens, JWT)
+  6.Method level Security
+
+Core Concepts in Spring Security:
+  1.Authentication(Who is the user?): Uniquely Identified credentials like username/password to access application
+    Knowledge based Authentication :   Password/Pincode/Answer to question.
+    Possessions based Authentication: Phone/ Text Message/ Key cards/ Access tokens
+    Multi factor Authentication: Knowledge based + Possessions based
+
+  2.Authorization(What user allowed to do): Access to specific services of the application.
+
+  3.Principal: Is the currently logged in user(currently authenticated user).
+
+  4.Granted Authority: Allowing user to access services in application if they are granted authorities to access.
+
+  5.Roles: Group of authorities assigned to particular user so that he can access services granted to that role.
+
+
+Adding Spring Security to  Spring boot project:\
+
+  Dependency:
+  <dependency>
+         <groupId>org.springframework.boot</groupId>
+         <artifactId>spring-boot-starter-security</artifactId>
+  </dependency>
+
+  Once you add dependency it will automatically add up security feature at the beginning.
+     -Adds mandatory authentication for URLs except /error URL. You need to login to access any api.
+     -Adds Login form.
+     -Handles login error.
+     -Creates a user(user) and sets a default password you get on console.
+      You can customise it:
+        spring.security.user.name="username"
+        spring.security.user.password="password"
+
+  It all happens with the help of Filters from servlet concept.
+  Basic servlet technologies runs in the background for spring boot.
+  Filter stands in the middle and check every request.
+
+
+Spring Authentication Implementation:
+  You need authentication depending on List of users you have.
+
+  Way to configure authentication is Spring is by using AuthenticationManager.
+  It is something what manages authentication.
+  authenticate() method used to authenticate user.
+  You don't actually create your own AuthenticationManager but actually you create
+  You use AuthenticationManagerBuilder to configure what the authentication should do.
+    1.Get hold of AuthenticationManagerBuilder.
+    2.Set configuration on it.
+
+    What kind of configuration AuthenticationManager asks?
+      1.What type of Authentication you need?
+        In Memory
+
+      2.Tell me username and password and role
+
+    Once you provide above info AuthenticationManager will be created.
+
+    How to achieve this?
+
+    1.Extend your security configuration class extends WebSecurityConfigurationAdapter
+    2.Override configure(AuthenticationManagerBuilder builder) Method
+    3.@EnableWebSecurity on class
