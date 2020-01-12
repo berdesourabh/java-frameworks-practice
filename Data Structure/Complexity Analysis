@@ -1,0 +1,51 @@
+How much time does this algorithm need to finish?
+How much space does this algorithm need?
+
+Big-O Notation
+
+Gives an upper bound of the complexity in worst case.
+
+n - The size of the input.
+
+    Constant Time:  O(1)
+  Logarithmic Time: O(log(n))
+      Linear Time:  O(n)
+Linearithmic Time:  O(nlog(n))
+    Quadratic Time: O(n^2)
+        Cubic Time: O(n^3)
+  Exponential Time: O(b^n), b > 1
+    Factorial Time: O(n!)
+
+Big-O Properties:
+
+O(n + c) = O(n)
+O(nc) = O(n), c > 0
+
+f(n) = 7log(n)^3 + 15n^2 + 2n^3 + 8
+
+O(f(n)) = O(n^3) because n^3 is the biggest.
+
+
+Important Big-O example:
+
+#Linear Time : O(n)
+  i = 0;                    i = 0;
+  while(i<n){                while(i<n) {
+  i = i+ 1;                   i=i+3;
+  }                           }
+
+  f(n) = n                    f(n) = n/3 Finishing loop 3 times faster.
+  O(f(n)) = O(n)              O(f(n)) = O(n)
+
+
+#O(n^2):
+Nested for loop
+
+#O(log(n)):
+Binary Search
+
+Some Classic examples for Big-O:
+  1.Finding all subsets of set - O(2^n)
+  2.Finding all permutations of String - O(n!)
+  3.Sorting using merge sort - O(nlog(n))
+  4.Iterating over all the cells in matrix of a size n by m - O(nm)

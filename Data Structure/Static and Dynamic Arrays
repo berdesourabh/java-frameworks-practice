@@ -1,0 +1,27 @@
+What is static Array?
+  Fixed length container containing n elements indexable from the range [0, n-1].
+  Each slot in array can be referenced with a number means "indexable".
+
+  Static arrays are given as continues chunk of Memory.All the addresses are adjacent in static array.
+
+  Complexity:
+
+  Operation           Best    Worst
+  Access              O(1)    O(1)      Access using index
+  Search              O(n)    O(n)
+  Insertion           N/A     O(n)      Need to reshuffle all array to insert (dynamic array)
+  Appending           N/A     O(1)
+  Deletion            N/A     O(n)      Reshuffle again
+
+
+
+  Dynamic Arrays can grow and shrink in size.
+  We can add elements in the dynamic array it will grow in size.
+
+  We need to implement dynamic array using static arrays
+
+  Steps:
+  1. Create a static array with an initial capacity.
+  2. Add elements to the underlying static array, keep track of number of elements.
+  3. If adding another element exceeds the capacity, then create a new static array with twice the capacity
+     and copy the original elements into it and add the new element we want to add.
