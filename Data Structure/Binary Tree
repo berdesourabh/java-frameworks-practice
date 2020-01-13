@@ -1,0 +1,106 @@
+Tree is an undirected graph
+
+Terminologies:
+Acyclic
+N Nodes and N-1 Edges
+
+
+Root node:
+Topmost node of tree.
+
+Child node: Extend from another node(Parent). Root node does not have parent or it itself is parent of it.
+
+Leaf node. Nodes with no children.
+
+Subtree: Tree entirely contained within another tree.
+
+
+#Binary Tree: Tree in which every node has at most 2 children.
+
+#Binary Search Tree:
+  Binary tree with left subtree contains smaller elements than root node and right subtree contains larger.
+
+
+Where we can use Binary Search Tree:
+
+Sets and Maps implementation
+Balanced Binary Search trees.
+
+
+Complexity of BSTs:
+
+Operation           Best         Worst
+Insert             O(log(n))      O(n)      Worst when tree is in line
+Delete             O(log(n))      O(n)
+Remove             O(log(n))      O(n)
+Search             O(log(n))      O(n)
+
+
+Operations On Binary Search Tree:
+
+Adding elements to BST:
+  Elements must be comparable so that we can order them inside tree.
+
+  -Recurse down left Subtree.         (< case)
+  -Recurse down right subtree.        (< case)
+  -Handle finding a duplicate value.  (= case)
+  -Create new Node.                   (Found null leaf)
+
+Removing Elements from BST:
+  1.Find the element we wish to remove.
+  2.Replace the node we want to remove with it's successor to maintain the BST invariant (left smaller and right larger)
+
+
+  Find Phase:
+    1.We Hit a null node at which point below we know value does not exist.
+    2.Comparator value equals to 0 (Found it!)
+    3.Comparator value less than 0(the value if it exist, is in the left subtree)
+    4.Comparator value greater than 0(The value if it exist, it is in the right subtree)
+
+  Remove phase:
+    1.Leaf node:
+      The node which we wish to remove is a leaf node and we can remove it without any side effect.
+
+    2.Either the left or right child node is a subtree.
+      The successor of the node we are trying to remove in these case will be the root node of the left/right subtree.
+      In this case the successor root node would be the successor of root node of node to remove
+
+    3.Node to remove has both a left and right subtree
+      The question here will be which subtree would be the successor of the node we are trying to remove be.
+      The answer is Both! The successor can either be the largest value in the left subtree or the smallest
+      value in the right subtree.
+
+Tree Traversals (Preorder, Inorder, Postorder & Level Order):
+
+  Preorder: Prints before the recursive call
+    preorder(node) {
+      if(node == null) return;
+      print(node.value);
+      preorder(node.left);
+      preorder(node.right);
+    }
+  Inorder: Prints between the recursive call
+
+  Inorder(node) {
+    if(node == null) return;
+    Inorder(node.left);
+    print(node.value);
+    Inorder(node.right);
+  }
+
+It prints in ascending order.
+
+  Postorder: Prints after the recursive call
+
+  Postorder(node) {
+    if(node == null) return;
+    Postorder(node.left);
+    Postorder(node.right);
+    print(node.value);
+  }
+
+Level Order Traversal:
+  In level order Traversal we want to print the nodes as they appear one layer at a time.
+
+  We need to maintain queue and use breadth first search.
+  We keep pushing nodes and while removing them we read the value and add their childs.

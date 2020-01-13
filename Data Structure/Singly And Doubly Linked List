@@ -1,0 +1,51 @@
+What is Linked List?
+
+A linked list is a sequential list of nodes that holds data which points to the other nodes.
+
+Data => Data => Data => null
+
+LL used in List, Queue and Stack Implementation.
+Circular Lists
+Trains
+Separate chaining, which is present certain HashTable Implementation to deal with hashing collision.
+
+
+Terminology;
+Head = The first node in linked list.
+Tail = The last node of the Linked List.
+Reference = Pointer to the another node.
+Node = An object containing data and pointer(s).
+
+3 -----> 85 -----> 32 -----> 44 -----> 54
+Head        Pointer          Node       Tail
+
+
+Singly vs Doubly Linked List:
+
+Singly LL holds pointer to the next node.
+Pros:
+Uses less memory.
+Simpler Implementation.
+
+Cons:
+Can not access previous elements.
+
+
+Doubly LL holds pointer to the next as well as previous Node.
+
+Pros:
+Can be traversed backwards.We can traverse efficiently and can remove and add elements.
+
+Cons;
+Takes 2X memory.
+
+
+Complexity
+Operation                 Singly    Doubly
+Access                     O(n)      O(n)      Access using traversal
+Search                     O(n)      O(n)
+Insertion at head          O(1)      O(1)      always keep head pointer
+Insertion at tail          O(1)      O(1)
+Remove at head             O(1)      O(1)
+Remove at tail             O(n)      O(1)      Singly we need to remove once and traverse again to make last element as tail
+Remove in middle           O(n)      O(n)      Through traversal

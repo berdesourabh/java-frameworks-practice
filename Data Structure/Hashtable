@@ -1,0 +1,26 @@
+Hash table is data structure let us keep mapping between keys and its values.
+
+To understand how the mapping between key-value is constructed we need to first understand Hash function.
+
+  A hash function H(x) is a function that maps key x to whole number to a fixed range.
+
+  H(x) = x^2 - 6x + 9 mod 10;
+  All integers should in range [0-9]
+  H(4) = (16 + 24 + 9) mod 10 = 1;
+
+  Properties of Hash function
+  1. If H(x) = H(y) then objects x and y might be equal, but If H(x) != H(y) then x and y are certainly not equals.
+
+  2. A hash function H(x) must be deterministic. This means if H(x) produces y then H(x) must always produce y.
+
+
+
+  When H(x) =  H(y) then in hashtable we will get hash collision.
+  We can resolve hash collision using:
+
+  1.Separate Chaining
+    One of the many hash collision resolution strategies.
+    Maintains data in a data structure(usually linked list).
+    It is not limited to just Linked list but it could us implementation of Binary trees, arrays, self balancing trees etc.
+
+  2.Open addressing
