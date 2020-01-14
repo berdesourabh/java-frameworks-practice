@@ -1,0 +1,9 @@
+Java Memory Model:
+JIT Compile:
+JIT compiler allowed to change the order of code to run it faster.
+JIT compilation can change the order of instruction.
+It can change internally which will lead us to race condition.
+
+
+Rule:
+Single threaded code behavior must not change.

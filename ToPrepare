@@ -1,8 +1,13 @@
 Solve simple problems using TDD
 Java 11 features
-Java Memory Model
+
 Concurrency*
 Postresql syntax and indexing
 Production scenarios
 Architecture of old application with details
 Unit testing, Integration testing
+
+Videos for interview approach
+
+Java Memory Model:
+JIT Compile: JIT compilation can change the order of instruction.It can change internally which will lead us to race condition.

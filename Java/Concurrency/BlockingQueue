@@ -1,0 +1,61 @@
+Blocking Queue:
+
+The Java BlockingQueue interface, java.util.concurrent.BlockingQueue, represents a queue which is thread safe to put elements into, and take elements out of from.
+In other words, multiple threads can be inserting and taking elements concurrently from a Java BlockingQueue, without any concurrency issues arising.
+
+The producing thread will keep producing new objects and insert them into the BlockingQueue, until the queue reaches some upper bound on what it can contain.
+It's limit, in other words. If the blocking queue reaches its upper limit, the producing thread is blocked while trying to insert the new object.
+ It remains blocked until a consuming thread takes an object out of the queue.
+
+The consuming thread keeps taking objects out of the BlockingQueue to processes them.
+If the consuming thread tries to take an object out of an empty queue, the consuming thread is blocked until a producing thread puts an object into the queue.
+
+
+
+ 	      Throws Exception  	Special Value  	  Blocks	  Times Out
+Insert	  add(o)	             offer(o)      	put(o)	   offer(o, timeout, timeunit)
+Remove  	remove(o)	           poll()	        take()	   poll(timeout, timeunit)
+Examine	  element()	           peek()
+
+
+Blocking queue implmentation :
+
+1.Array Blocking Queue:
+  ArrayBlockingQueue is a bounded, blocking queue that stores the elements internally in an array.
+  That it is bounded means that it cannot store unlimited amounts of elements.
+  There is an upper bound on the number of elements it can store at the same time.
+  You set the upper bound at instantiation time, and after that it cannot be changed.
+
+2.Delay Blocking queue:
+  The DelayQueue blocks the elements internally until a certain delay has expired.
+  The elements must implement the interface java.util.concurrent.Delayed. Here is how the interface looks:
+
+  public interface Delayed extends Comparable<Delayed< {
+
+    public long getDelay(TimeUnit timeUnit);
+
+    }
+
+
+    public class DelayQueueExample {
+      public static void main(String[] args) {
+        DelayQueue queue = new DelayQueue();
+        Delayed element1 = new DelayedElement();
+        queue.put(element1);
+        Delayed element2 = queue.take();
+    }
+}
+The DelayedElement is an implementation of the Delayed interface that I have created. It is not part of the java.util.concurrent package.
+You will have to create your own implementation of the Delayed interface to use the DelayQueue class.
+
+
+3.LinkedBlockingQueue:
+  The LinkedBlockingQueue keeps the elements internally in a linked structure (linked nodes).
+   This linked structure can optionally have an upper bound if desired. If no upper bound is specified, Integer.MAX_VALUE is used as the upper bound.
+
+
+4.PriorityBlockingQueue:
+  PriorityBlockingQueue stores element in a specific order which you would define, so object should implement Comparable interface.
+  If two objects has the same priority(compare()==0) then while iteration it does not guarantee order for those elements.
+
+5.Synchronous Queue: SynchronousQueue can contain only one element at a time. While thread inserts element into SynchronousQueue it will be blocked until another thread reads the element.

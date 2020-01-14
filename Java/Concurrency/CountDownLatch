@@ -1,0 +1,40 @@
+
+A CountDownLatch is initialized with a given count. This count is decremented by calls to the countDown() method.
+Threads waiting for this count to reach zero can call one of the await() methods.
+ Calling await() blocks the thread until the count reaches zero.
+
+public static void main(String[] args) {
+        CountDownLatch latch = new CountDownLatch(2);
+
+        new Thread(() -> {
+            try {
+                System.out.println("before latch " + Thread.currentThread().getName());
+                latch.countDown();
+                System.out.println("Waiting for another thread to complete");
+                latch.await();
+                System.out.println("after latch " + Thread.currentThread().getName());
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }).start();
+
+        new Thread(() -> {
+            try {
+                System.out.println("before latch " + Thread.currentThread().getName());
+                Thread.sleep(4000);
+                latch.countDown();
+                latch.await();
+                System.out.println("after latch " + Thread.currentThread().getName());
+                e.printStackTrace();
+                } catch (InterruptedException e) {
+            }
+        }).start();
+    }
+
+
+Output:
+before latch Thread-0
+Waiting for another thread to complete
+before latch Thread-1
+after latch Thread-1
+after latch Thread-0

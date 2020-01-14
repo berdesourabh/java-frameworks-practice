@@ -1,0 +1,6 @@
+ConcurrentMap represents map which is capable of handling concurrent get and put operation.
+
+ConcurrentHashMap:
+  ConcurrentHashMap is very similar to HashTable excepts it does better concurrency than HashTable.
+  ConcurrentHashMap does not lock whole map while reading and writing.
+  It only locks part of it while writing.

@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e0e9b2bc-d5a4-481f-911f-0b5ab7a8c7fd" name="Default Changelist" comment="" />
+    <list default="true" id="e0e9b2bc-d5a4-481f-911f-0b5ab7a8c7fd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataStructure.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/ds/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ds/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/ds/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/ds/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/ds/dynamicarray/BinarySearchTree$Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/ds/dynamicarray/BinarySearchTree$Node.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/ds/dynamicarray/BinarySearchTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/ds/dynamicarray/BinarySearchTree.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/ds/dynamicarray/DoublyLinkedList$Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/ds/dynamicarray/DoublyLinkedList$Node.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/ds/dynamicarray/DoublyLinkedList.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/ds/dynamicarray/DoublyLinkedList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/ds/dynamicarray/DynamicArray.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/ds/dynamicarray/DynamicArray.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/ds/AppTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/ds/AppTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Spring Framework/Notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Spring Framework/Notes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ToPrepare" beforeDir="false" afterPath="$PROJECT_DIR$/../../ToPrepare" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +34,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -22,6 +45,7 @@
     </option>
   </component>
   <component name="ProjectId" id="1WHggIiCcdiK9gNHNz7TVUsgLHp" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -29,6 +53,25 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean build" />
+    </option>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager" selected="Application.App">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -78,18 +121,6 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -102,6 +133,19 @@
       <updated>1578812043709</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="WindowStateProjectService">
     <state x="533" y="178" key="#com.intellij.ide.util.MemberChooser" timestamp="1578817497271">
@@ -148,11 +192,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/ds/App.java</url>
-          <line>12</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/ds/dynamicarray/DynamicArray.java</url>
           <line>79</line>

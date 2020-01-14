@@ -57,28 +57,28 @@ https://medium.com/omarelgabrys-blog/spring-a-head-start-introduction-part-1-130
 
 
 
-  IOC Container:
+#IOC Container:
   The Spring IoC container is at the core of the Spring Framework. The container will create the objects, wire them together, configure them, and manage their complete life cycle from creation till destruction. The Spring container uses dependency injection (DI) to manage the components that make up an application.
 
 Spring provides following two types of containers.
 
 1.BeanFactory container:
 
-A BeanFactory is essentially nothing more than the interface for an advanced factory capable of maintaining a registry of different beans and their dependencies.
+  A BeanFactory is essentially nothing more than the interface for an advanced factory capable of maintaining a registry of different beans and their dependencies.
 
-The BeanFactory enables us to read bean definitions and access them using the bean factory.
+  The BeanFactory enables us to read bean definitions and access them using the bean factory.
 
-Resource resource = new FileSystemResource("beans.xml");
-BeanFactory factory = new XmlBeanFactory(resource);
+  Resource resource = new FileSystemResource("beans.xml");
+  BeanFactory factory = new XmlBeanFactory(resource);
 
-ClassPathResource resource = new ClassPathResource("beans.xml");
-BeanFactory factory = new XmlBeanFactory(resource);
+  ClassPathResource resource = new ClassPathResource("beans.xml");
+  BeanFactory factory = new XmlBeanFactory(resource);
 
 
 2.ApplicationContext container
-ApplicationContext container adds more enterprise-specific functionality such as the ability to resolve textual messages from a properties file and the ability to publish application events to interested event listeners.
-This container is defined by the org.springframework.context.ApplicationContext interface.
+  ApplicationContext container adds more enterprise-specific functionality such as the ability to resolve textual messages from a properties file and the ability to publish application events to interested event listeners.
+  This container is defined by the org.springframework.context.ApplicationContext interface.
 
-FileSystemXmlApplicationContext – This container loads the definitions of the beans from an XML file. Here you need to provide the full path of the XML bean configuration file to the constructor.
-ClassPathXmlApplicationContext – This container loads the definitions of the beans from an XML file. Here you do not need to provide the full path of the XML file but you need to set CLASSPATH properly because this container will look bean configuration XML file in CLASSPATH.
-WebXmlApplicationContext – This container loads the XML file with definitions of all beans from within a web application.
+  FileSystemXmlApplicationContext – This container loads the definitions of the beans from an XML file. Here you need to provide the full path of the XML bean configuration file to the constructor.
+  ClassPathXmlApplicationContext – This container loads the definitions of the beans from an XML file. Here you do not need to provide the full path of the XML file but you need to set CLASSPATH properly because this container will look bean configuration XML file in CLASSPATH.
+  WebXmlApplicationContext – This container loads the XML file with definitions of all beans from within a web application.
