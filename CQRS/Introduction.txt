@@ -1,0 +1,49 @@
+WHat is CQRS?
+
+It is Command and Query responsibility sagrigation.
+Basically principle says you should split your app in 2 parts. And one of those part is responsible for Command(user/system wants to do on your system) and another part used  for Query(Read data).
+
+
+https://medium.com/margobank/choosing-an-architecture-85750e1e5a03
+
+
+We defined at least five key requirements for our Core Banking System.
+1. Traceability, in case of an audit we must be able to justify each data in the system with the series of operations that lead to it;
+
+2.Performance, our customers see bank accounts and operations, but our accountants see the transactions in a very different way, yet both should benefit from a very fast interface;
+
+3.Availability, we have the responsibility to keep and improve people’s faith in payment systems, refuting a card payment because we couldn’t answer an authorization request in time would be unacceptable;
+
+4.Consistency, we must be confident over an account balance before we charge it;
+
+5.Maintainability, we must be able to quickly diagnose problems and fix them. You don’t mess with people’s money. Also, our code should be fully tested, and the whole team should be able to work without stepping on each others toes.
+
+
+Traceability:
+  Our business lies in our data. Money itself is only data, an account balance is a number somewhere in a database that lets you pay your rent, your bills and your food.
+  But that’s not enough, we want to be fully transparent on our data, be able to justify each and every operation that happened on an account, leading to its current balance.
+  Our architecture must allow that by design.
+  There’s an emerging pattern in software architecture called Event Sourcing (ES).
+  The mantra of ES is that the state of a system is given by all the events that lead to that state.
+  Those events can never be modified once emitted, and are stored in an append-only storage called the event store.
+
+
+  ------------------------------------------------------------------------------------
+  |                                    Event Source                                   |
+  |                                                                                   |
+  |  Bank Account Created --> Deposited --> Withdrawn --> Changed Owner --> Deposited |
+  |                                                                                   |
+  -------------------------------------------------------------------------------------
+
+  This is very good for traceability, everything that ever happened to the system is in our database.
+  But now even the simplest query becomes very complex. Getting an account balance, for example, would force us to iterate through the event store to sum deposits and withdrawals. Not only this is not trivial to implement, it will also get slower and slower as events pile up.
+
+Performance:
+  That’s the reason why ES is used in combination with another pattern called Command Query Responsibility Segregation, or CQRS.
+  This pattern handles reads and writes in the system with two very distinct entities.
+  In this configuration, ES offers a very natural boundary between them.
+  This architecture is usually referred to as CQRS/ES.
+
+  The read side waits for events from the event store, and has its own database. After each event, it updates his database accordingly.
+
+  BankAccount is called a projection of the event stream. This approach has tremendous advantages when it comes to performance and maintainability.

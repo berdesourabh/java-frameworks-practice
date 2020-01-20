@@ -1,0 +1,31 @@
+Unwanted Bugs Or Event that prevents normal execution of program.
+Types of Exception in Java:
+
+1.Throwable
+  1.1.Exception
+    1.1.1.Runtime Exception
+    1.1.2.Other Exception
+  1.2.Error
+
+  There are mainly two types of exception is java:
+
+  1.Checked Exception
+  2.Unchecked Exception
+
+Checked Exception:
+    Checked exceptions are also known as compile-time exceptions as these exceptions are checked by the compiler during the compilation process to confirm whether the exception is handled by the programmer or not.
+     If not, then the system displays a compilation error.
+     For example,
+     SQLException,
+     IOException,
+     InvocationTargetException,
+     ClassNotFoundException.
+
+Unchecked Exception:
+  The Unchecked Exceptions are the exception which occurs during the execution of the program.
+  They are also referred as runtime exceptions.
+
+  Nullpointer Exception
+  ArrayIndexOutofBund Exception
+  NumberFormat Exception
+  Arithmetic Exception

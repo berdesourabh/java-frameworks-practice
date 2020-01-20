@@ -1,0 +1,40 @@
+REST(Representational State Transfer)
+
+Architectural style for distributed hypermedia systems.
+It is an architecture style for designing loosely coupled applications over HTTP, that is often used in the development of web services.
+ REST does not enforce any rule regarding how it should be implemented at lower level, it just put high level design guidelines and leave you to think of your own implementation.
+
+ REST defines 6 architectural constraints which make any web service – a true RESTful API.
+
+ 1.Uniform interface:
+  As the constraint name itself applies, you MUST decide APIs interface for resources inside the system which are exposed to API consumers and follow religiously.
+  A resource in the system should have only one logical URI, and that should provide a way to fetch related or additional data.
+  It’s always better to synonymize a resource with a web page.
+
+ 2.Client–server:
+  This essentially means that client application and server application MUST be able to evolve separately without any dependency on each other.
+  A client should know only resource URIs, and that’s all. Today, this is normal practice in web development, so nothing fancy is required from your side. Keep it simple.
+
+ 3.Stateless:
+
+ 4.Cacheable
+ 5.Layered system
+ 6.Code on demand (optional)
+
+
+
+REST Resource naming guidelines
+
+A resource can be a singleton or a collection. For example, “customers” is a collection resource and “customer” is a singleton resource (in a banking domain).
+ We can identify “customers” collection resource using the URI “/customers”.
+We can identify a single “customer” resource using the URI “/customers/{customerId}”.
+
+A resource may contain sub-collection resources also. For example, sub-collection resource “accounts” of a particular “customer” can be identified using the URN “/customers/{customerId}/accounts” (in a banking domain).
+ Similarly, a singleton resource “account” inside the sub-collection resource “accounts” can be identified as follows: “/customers/{customerId}/accounts/{accountId}”.
+
+https://restfulapi.net/resource-naming/
+
+
+Building REST API without framework
+
+https://dzone.com/articles/lightweight-embedded-java-rest-server-without-a-fr
