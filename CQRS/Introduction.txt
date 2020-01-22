@@ -5,6 +5,8 @@ Basically principle says you should split your app in 2 parts. And one of those 
 
 
 https://medium.com/margobank/choosing-an-architecture-85750e1e5a03
+https://cqrs.wordpress.com/documents/cqrs-introduction/
+https://martinfowler.com/bliki/CQRS.html
 
 
 We defined at least five key requirements for our Core Banking System.

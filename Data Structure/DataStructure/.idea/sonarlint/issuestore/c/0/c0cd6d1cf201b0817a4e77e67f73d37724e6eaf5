@@ -1,10 +1,10 @@
 
 vsquid:UselessImportCheck"FRemove this unused import 'java.util.concurrent.atomic.AtomicInteger'.(¿êäœøÿÿÿÿ8¬Ä–›ú-
-fsquid:UselessImportCheck";Remove this unused import 'java.util.function.IntConsumer'.(æ ¹8ÏÈ¿ú-
-Fsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÇƒÅú-
-V
-squid:S106"9Replace this use of System.out or System.err by a logger.(½¡¦8¼ĞÅú-
 Usquid:S3958"2Refactor the code so this stream pipeline is used.(ö€ÊÀÿÿÿÿÿ8Œê§ú-
 V
 squid:S106"9Replace this use of System.out or System.err by a logger.(ø¦éÏ8ïèÉú-
+Fsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÇƒÅú-
 dsquid:S2142"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8ÇƒÅú-
+V
+squid:S106"9Replace this use of System.out or System.err by a logger.(½¡¦8¼ĞÅú-
+fsquid:UselessImportCheck";Remove this unused import 'java.util.function.IntConsumer'.(æ ¹8ÏÈ¿ú-

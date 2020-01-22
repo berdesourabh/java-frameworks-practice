@@ -1,12 +1,12 @@
 
-osquid:CommentedOutCodeLineƒ"<This block of commented-out lines of code should be removed.(†¯§¿ÿÿÿÿÿ8§ƒ®šû-
-msquid:S2272˜"NAdd a "NoSuchElementException" for iteration beyond the end of the collection.(žÓÔç8ãà˜û-
 :squid:S1659"#Declare "right" on a separate line.(çùà¶
-Vsquid:S1854["8Remove this useless assignment to local variable "node".(¤³çæ8”ì˜—û-
 Vsquid:S1854b"8Remove this useless assignment to local variable "node".(¤³çæ8¹é™—û-
+msquid:S2272²"NAdd a "NoSuchElementException" for iteration beyond the end of the collection.(žÓÔç8ý§šû-
+osquid:CommentedOutCodeLineÆ"<This block of commented-out lines of code should be removed.(×Û¤Ñúÿÿÿÿ8Î¥¨šû-
 W
 squid:S106×"9Replace this use of System.out or System.err by a logger.(É„†ú8ý»¬šû-
-msquid:S2272²"NAdd a "NoSuchElementException" for iteration beyond the end of the collection.(žÓÔç8ý§šû-
 osquid:S1149"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(Ì¹±ý8‰¸·˜û-
-osquid:CommentedOutCodeLineÆ"<This block of commented-out lines of code should be removed.(×Û¤Ñúÿÿÿÿ8Î¥¨šû-
+msquid:S2272˜"NAdd a "NoSuchElementException" for iteration beyond the end of the collection.(žÓÔç8ãà˜û-
 osquid:S1149¤"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(Ì¹±ý8¿àì˜û-
+Vsquid:S1854["8Remove this useless assignment to local variable "node".(¤³çæ8”ì˜—û-
+osquid:CommentedOutCodeLineƒ"<This block of commented-out lines of code should be removed.(†¯§¿ÿÿÿÿÿ8§ƒ®šû-

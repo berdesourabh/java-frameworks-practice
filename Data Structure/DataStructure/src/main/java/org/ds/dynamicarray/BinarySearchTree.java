@@ -209,7 +209,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
         t.add(11);
         t.add(2);
 
-        Iterator it = t.inOrderTraversal();
+        Iterator it = t.preOrderTraversal();
 
         while (it.hasNext()) {
             System.out.println(it.next());

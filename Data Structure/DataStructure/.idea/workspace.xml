@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e0e9b2bc-d5a4-481f-911f-0b5ab7a8c7fd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/0/c0cd6d1cf201b0817a4e77e67f73d37724e6eaf5" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/0/c0cd6d1cf201b0817a4e77e67f73d37724e6eaf5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CQRS/Introduction.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../CQRS/Introduction.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/ds/dynamicarray/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ds/dynamicarray/BinarySearchTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/ds/dynamicarray/BinarySearchTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/ds/dynamicarray/BinarySearchTree.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -208,13 +209,23 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/ds/dynamicarray/BinarySearchTree.java</url>
-          <line>206</line>
-          <option name="timeStamp" value="8" />
+          <line>77</line>
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/ds/dynamicarray/BinarySearchTree.java</url>
-          <line>77</line>
-          <option name="timeStamp" value="17" />
+          <line>162</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/ds/dynamicarray/BinarySearchTree.java</url>
+          <line>178</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/ds/dynamicarray/BinarySearchTree.java</url>
+          <line>171</line>
+          <option name="timeStamp" value="21" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
