@@ -1,0 +1,47 @@
+Balanced Binary Search Tree is a self balancing BST.
+This type of tree will adjust itself to maintain low logarithmic height allowing for faster operations such as insertion and deletion.
+
+Operation           Best            Worst
+Insert             O(log(n))      O(log(n))
+Delete             O(log(n))      O(log(n))
+Remove             O(log(n))      O(log(n))
+Search             O(log(n))      O(log(n))
+
+
+Tree rotation:
+using tree rotations Balanced Binary Search tree balances itself.
+
+The secret to most BBST algorithms is the clever usage of a tree invariant and Tree Rotations.
+
+A Tree invariant is a rule that you impose in your tree that it must meet after every operation.
+
+To ensure that this invariant is always satisfied a series of tree rotations are normally applied.
+
+
+Types of BBST:
+
+1.AVL tree
+2.AA tree
+3.Scapegoat tree
+4.red-black tree
+
+
+########## AVL Tree ##############
+
+An AVL tree is one of many types of BBSTs.
+It allows O(log(n)) Complexity for Insertion, deletion and search Operations.
+
+The property that keeps AVL tree balanced is called as Balanced Factor(BF).
+
+BF(node) = H(node.right) - H(node.left)
+where H(x) is height of node x.
+
+H(x) is calculated as the number of edges between x and the furtherest leaf node.
+
+The invariant in the AVL which forces it to remain balanced is the requirement that the balanced factor is always either -1,0 or +1.
+
+4 Cases for balancing the AVL tree:
+1.Left rotation
+2.Right Rotation
+3.Left-right rotation
+4.Right-left rotation
