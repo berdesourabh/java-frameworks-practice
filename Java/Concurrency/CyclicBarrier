@@ -1,0 +1,46 @@
+CyclicBarrier is used to make threads wait for each other.
+ It is used when different threads process a part of computation and when all threads have completed the execution, the result needs to be combined in the parent thread.
+In other words, a CyclicBarrier is used when multiple thread carry out different sub tasks and the output of these sub tasks need to be combined to form the final output. After completing its execution, threads call await() method and wait for other threads to reach the barrier. Once all the threads have reached, the barriers then give the way for threads to proceed.
+
+
+
+public class CyclicBarrier {
+    public static java.util.concurrent.CyclicBarrier barrier = new java.util.concurrent.CyclicBarrier(4);
+
+    public static void main(String[] args) throws InterruptedException, BrokenBarrierException {
+        new Thread(() -> {
+            new Thread(() -> {
+                try {
+                    System.out.println("This is first thread" + Thread.currentThread().getName());
+                    Thread.sleep(1000);
+                    CyclicBarrier.barrier.await(); //1st Thread to execute await
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+            }).start();
+
+            new Thread(() -> {
+                try {
+                    System.out.println("This is second thread" + Thread.currentThread().getName());
+                    Thread.sleep(1000);
+                    CyclicBarrier.barrier.await(); //2nd Thread to execute await
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+            }).start();
+
+            try {
+
+                CyclicBarrier.barrier.await(); //3rd Thread
+            } catch (InterruptedException | BrokenBarrierException e) {
+                e.printStackTrace();
+            }
+        }).start();
+
+        Thread.sleep(5000);
+        CyclicBarrier.barrier.await(); //Main Thread
+        CyclicBarrier.barrier.reset();
+        System.out.println(CyclicBarrier.barrier.getParties());
+        System.out.println("Reset");
+    }
+}

@@ -1,0 +1,6 @@
+It represents an anonymous execution mechanism which is capable of executing tasks concurrently in the background.
+
+
+ExecutorService service1 = Executors.newSingleThreadExecutor();
+ExecutorService service1 = Executors.newFixedThreadPool(10);
+ExecutorService service1 = Executors.newScheduledThreadPool(10);
