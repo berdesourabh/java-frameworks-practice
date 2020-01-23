@@ -1,0 +1,49 @@
+Is a term to describe common pattern.
+
+Let's take an example:
+
+Building a system to manage addresses
+
+2 Entities: Person and Address
+
+Let's say you want to Create/Update address of particular person.
+
+You just post/put address directly in DB
+
+Event Sourcing:
+
+We actually divide create a event that summarize what is change
+and we apply event to DB.
+
+We logs events whatever happens in system.
+
+We can anytime blow away application state completely and we can replay event in our logs again.
+Events are fundamental source of truth.
+
+Example: Version control system.
+
+
+Why we do event sourcing?
+
+1.Audit Trail
+  We have all the events stored in logs. We can rely on those logs to build again system.
+
+2.Debugging
+  Take system and take production system and copy it in lab and replay events and check what is wrong in system.
+
+3.Historical capability:
+  Go to any historical state using event logs.
+
+4.Helps to achieve CQRS.
+  You can take events to update multiple query systems.
+  There can be multiple DBs stores data in this case you can use events to update data in DB effectively.
+
+  Problems with CQRS
+  But there is problem with consistency.
+  Some events goes into one query system and some does not. This leads to eventual consistency not strong consistency.
+
+  CQRS is difficult to use well.
+
+
+5.Distribution support:
+  Useful to build distributed system such as microservices.
